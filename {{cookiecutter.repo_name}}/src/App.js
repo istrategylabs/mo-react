@@ -1,30 +1,49 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Helmet from 'react-helmet';
-import logo from './logo.svg';
-import './App.css';
+import Home from './views/Home';
+import About from './views/About';
+import Error from './views/Error';
+import Wrapper from './components/Wrapper';
+import Nav from './components/Nav';
+import NavLink from './components/NavLink';
+
+const title = '{{ cookiecutter.project_name }}';
+const routes = [
+  {
+    title: 'Home',
+    path: '/',
+    component: Home,
+    exact: true
+  }, {
+    title: 'About',
+    path: '/about',
+    component: About
+  }
+];
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Helmet title="{{ cookiecutter.project_name }}" />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Wrapper>
+          <Helmet titleTemplate={`%s - ${title}`} />
+          <Nav>
+            <h1>Navigation</h1>
+            {routes.map((route, i) => (
+              <NavLink key={i} {...route} />
+            ))}
+          </Nav>
+          <Switch>
+            {routes.map((route, i) => (
+              <Route key={i} {...route} />
+            ))}
+            <Route component={Error} />
+          </Switch>
+        </Wrapper>
+      </Router>
     );
   }
-}
+};
 
 export default App;

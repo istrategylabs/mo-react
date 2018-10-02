@@ -11,6 +11,7 @@
 ## Installation
 
 ```
+$ nvm use
 $ yarn
 ```
 
@@ -18,4 +19,10 @@ $ yarn
 
 ```
 $ yarn start
+```
+
+## Build
+
+```
+$ yarn build
 ```
