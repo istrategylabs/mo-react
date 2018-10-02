@@ -1,0 +1,7 @@
+{
+  "project_name": "mo-react",
+  "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "author_name": "ISL",
+  "email": "dev@isl.co",
+  "description": ""
+}
