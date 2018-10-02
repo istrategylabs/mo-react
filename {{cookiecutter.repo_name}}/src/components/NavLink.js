@@ -14,7 +14,7 @@ const NavLink = styled.div`
       color: ${props => props.active ? PRIMARY : SECONDARY};
     }
   }
-`
+`;
 
 export default ({path, exact, ...props}) => (
   <Route path={path} exact={exact} children={({match}) => (
@@ -22,4 +22,4 @@ export default ({path, exact, ...props}) => (
       <Link to={path}>{props.title}</Link>
     </NavLink>
   )} />
-)
+);
