@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Helmet from 'react-helmet';
-import Home from './views/Home';
-import About from './views/About';
+
+import routes from './routes';
+
 import Error from './views/Error';
 import Wrapper from './components/Wrapper';
 import Header from './components/Header';
-import Nav from './components/Nav';
-import NavLink from './components/NavLink';
+import Grid from './components/Grid';
+import Column from './components/Column';
+import Footer from './components/Footer';
 
 const title = '{{ cookiecutter.project_name }}';
-const routes = [
-  {
-    title: 'Home',
-    path: '/',
-    component: Home,
-    exact: true
-  }, {
-    title: 'About',
-    path: '/about',
-    component: About
-  }
-];
+
 
 class App extends Component {
   render() {
@@ -29,23 +20,22 @@ class App extends Component {
       <Router>
         <Wrapper>
           <Helmet titleTemplate={`%s - ${title}`} />
-          <Header>
-            <Link to="/">
-              <img className="logo" src="/images/logo.svg" alt="{{ cookiecutter.project_name }}" height="auto" width={210} />
-            </Link>
-            <Nav>
-              <h1>Navigation</h1>
+          <div>
+            <Header />
+            <Switch>
               {routes.map((route, i) => (
-                <NavLink key={i} {...route} />
+                <Route key={i} {...route} />
               ))}
-            </Nav>
-          </Header>
-          <Switch>
-            {routes.map((route, i) => (
-              <Route key={i} {...route} />
-            ))}
-            <Route component={Error} />
-          </Switch>
+              <Route component={Error} />
+            </Switch>
+          </div>
+          <Footer>
+            <Grid>
+              <Column width={12}>
+                &copy; 2018
+              </Column>
+            </Grid>
+          </Footer>
         </Wrapper>
       </Router>
     );
