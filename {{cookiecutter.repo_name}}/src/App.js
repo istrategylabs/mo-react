@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
 import routes from './routes';
@@ -12,7 +12,6 @@ import Column from './components/Column';
 import Footer from './components/Footer';
 
 const title = '{{ cookiecutter.project_name }}';
-
 
 class App extends Component {
   render() {

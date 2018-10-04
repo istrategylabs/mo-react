@@ -1,26 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TEXT } from '../styles/colors';
 import Grid from './Grid';
 import Column from './Column';
 
 const StyledPage = styled.div`
-  h1 {
-    font-size: 5vmin;
-    font-weight: normal;
-    color: ${TEXT};
-  }
-  p {
-    font-size: 1rem;
-  }
+  padding: 40px 0;
 `;
 
 export default ({ children }) => {
-  return <Grid>
-    <Column width={12}>
-      <StyledPage>
+  return <StyledPage>
+    <Grid>
+      <Column width={8} smallWidth={12}>
         {children}
-      </StyledPage>
-    </Column>
-  </Grid>
+      </Column>
+      <Column width={4} smallWidth={12}>
+        Here is a sidebar for some reason.
+      </Column>
+    </Grid>
+  </StyledPage>
 };
