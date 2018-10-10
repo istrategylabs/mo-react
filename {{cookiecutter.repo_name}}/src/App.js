@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
 import routes from './routes';
@@ -16,27 +16,25 @@ const title = '{{ cookiecutter.project_name }}';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Wrapper>
-          <Helmet titleTemplate={`%s - ${title}`} />
-          <div>
-            <Header />
-            <Switch>
-              {routes.map((route, i) => (
-                <Route key={i} {...route} />
-              ))}
-              <Route component={Error} />
-            </Switch>
-          </div>
-          <Footer>
-            <Grid>
-              <Column width={12}>
-                &copy; 2018
-              </Column>
-            </Grid>
-          </Footer>
-        </Wrapper>
-      </Router>
+      <Wrapper>
+        <Helmet titleTemplate={`%s - ${title}`} />
+        <div>
+          <Header />
+          <Switch>
+            {routes.map((route, i) => (
+              <Route key={i} {...route} />
+            ))}
+            <Route component={Error} />
+          </Switch>
+        </div>
+        <Footer>
+          <Grid>
+            <Column width={12}>
+              &copy; 2018
+            </Column>
+          </Grid>
+        </Footer>
+      </Wrapper>
     );
   }
 };
