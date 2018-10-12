@@ -29,7 +29,7 @@ export default (props) => (
       <Column width={12}>
         <StyledHeader>
           <Link to="/">
-            <img className="logo" src="/images/logo.svg" alt="{{ cookiecutter.project_name }}" height="auto" width={210} data-testid='home-image' />
+            <img className="logo" src="/images/logo.svg" alt="{{ cookiecutter.project_name }}" height="auto" width={210} data-testid="home-image" />
           </Link>
           <Nav />
         </StyledHeader>
