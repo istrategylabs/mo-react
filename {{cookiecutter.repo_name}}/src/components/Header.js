@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import Grid from './Grid';
-import Column from './Column';
-import Nav from './Nav';
+import Grid from "./Grid";
+import Column from "./Column";
+import Nav from "./Nav";
 
 const StyledContainer = styled.div`
   background: #eee;
@@ -23,13 +23,20 @@ const StyledHeader = styled.header`
   }
 `;
 
-export default (props) => (
+export default props => (
   <StyledContainer>
     <Grid>
       <Column width={12}>
         <StyledHeader>
           <Link to="/">
-            <img className="logo" src="/images/logo.svg" alt="{{ cookiecutter.project_name }}" height="auto" width={210} data-testid="home-image" />
+            <img
+              className="logo"
+              src="/images/logo.svg"
+              alt="{{ cookiecutter.project_name }}"
+              height="auto"
+              width={210}
+              data-testid="home-image"
+            />
           </Link>
           <Nav />
         </StyledHeader>
