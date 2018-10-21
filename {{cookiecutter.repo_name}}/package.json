@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test",
+    "a11y": "./src/tests/lighthouse/a11y.sh",
     "eject": "react-scripts eject",
     "serve": "cd build && serve && cd .."
   },
