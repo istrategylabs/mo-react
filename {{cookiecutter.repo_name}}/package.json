@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test",
+    "prettier": "prettier --write \"src/**/**.js\"",
     "eject": "react-scripts eject",
     "serve": "yarn build && cd build && serve && cd .."
   },

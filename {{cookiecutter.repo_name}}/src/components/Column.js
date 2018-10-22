@@ -1,41 +1,49 @@
-import React from 'react';
-import styled from 'styled-components';
-import { XL, L, M, S } from '../styles/breakpoints';
-import { SMALL } from '../styles/spacing';
+import React from "react";
+import styled from "styled-components";
+import { XL, L, M, S } from "../styles/breakpoints";
+import { SMALL } from "../styles/spacing";
 
-const sub = (gutter, cols) => ( cols * 11 * gutter - 12 * ( cols - 1 ) * gutter ) / 12;
+const sub = (gutter, cols) => (cols * 11 * gutter - 12 * (cols - 1) * gutter) / 12;
 
 const StyledColumn = styled.div`
-  margin-bottom: ${props => props.marginBottom ? SMALL : 0}px;
-  margin-right: ${props => props.XSlast ? 0 : SMALL}px;
-  width: calc(${props => 100 * props.xSmallWidth / 12}% - ${props => sub(SMALL, props.xSmallWidth)}px);
+  margin-bottom: ${props => (props.marginBottom ? SMALL : 0)}px;
+  margin-right: ${props => (props.XSlast ? 0 : SMALL)}px;
+  width: calc(
+    ${props => (100 * props.xSmallWidth) / 12}% - ${props => sub(SMALL, props.xSmallWidth)}px
+  );
 
   @media screen and (min-width: ${S + 1}px) {
-    margin-bottom: ${props => props.marginBottom ? SMALL : 0}px;
-    margin-right: ${props => props.Slast ? 0 : SMALL}px;
-    width: calc(${props => 100 * props.smallWidth / 12}% - ${props => sub(SMALL, props.smallWidth)}px);
+    margin-bottom: ${props => (props.marginBottom ? SMALL : 0)}px;
+    margin-right: ${props => (props.Slast ? 0 : SMALL)}px;
+    width: calc(
+      ${props => (100 * props.smallWidth) / 12}% - ${props => sub(SMALL, props.smallWidth)}px
+    );
   }
 
   @media screen and (min-width: ${M + 1}px) {
-    margin-bottom: ${props => props.marginBottom ? SMALL : 0}px;
-    margin-right: ${props => props.Mlast ? 0 : SMALL}px;
-    width: calc(${props => 100 * props.medWidth / 12}% - ${props => sub(SMALL, props.medWidth)}px);
+    margin-bottom: ${props => (props.marginBottom ? SMALL : 0)}px;
+    margin-right: ${props => (props.Mlast ? 0 : SMALL)}px;
+    width: calc(
+      ${props => (100 * props.medWidth) / 12}% - ${props => sub(SMALL, props.medWidth)}px
+    );
   }
 
   @media screen and (min-width: ${L + 1}px) {
-    margin-bottom: ${props => props.marginBottom ? SMALL : 0}px;
-    margin-right: ${props => props.Llast ? 0 : SMALL}px;
-    width: calc(${props => 100 * props.largeWidth / 12}% - ${props => sub(SMALL, props.largeWidth)}px);
+    margin-bottom: ${props => (props.marginBottom ? SMALL : 0)}px;
+    margin-right: ${props => (props.Llast ? 0 : SMALL)}px;
+    width: calc(
+      ${props => (100 * props.largeWidth) / 12}% - ${props => sub(SMALL, props.largeWidth)}px
+    );
   }
 
   @media screen and (min-width: ${XL + 1}px) {
-    margin-bottom: ${props => props.marginBottom ? 2 * SMALL : 0}px;
-    margin-right: ${props => props.XLlast ? 0 : 2 * SMALL}px;
-    width: calc(${props => 100 * props.width / 12}% - ${props => sub(2 * SMALL, props.width)}px);
+    margin-bottom: ${props => (props.marginBottom ? 2 * SMALL : 0)}px;
+    margin-right: ${props => (props.XLlast ? 0 : 2 * SMALL)}px;
+    width: calc(${props => (100 * props.width) / 12}% - ${props => sub(2 * SMALL, props.width)}px);
   }
 
   @media print {
-    display: ${props => props.hidePrint ? 'none !important' : 'block'};
+    display: ${props => (props.hidePrint ? "none !important" : "block")};
   }
 `;
 
@@ -56,8 +64,7 @@ const StyledColumn = styled.div`
  * - smallWidth
  * - xSmallWidth
  */
-const Column = (props) => {
-
+const Column = props => {
   const {
     width,
     largeWidth = width,
@@ -79,9 +86,7 @@ const Column = (props) => {
     hidePrint
   });
 
-  return <StyledColumn {...colProps}>
-    {children}
-  </StyledColumn>;
+  return <StyledColumn {...colProps}>{children}</StyledColumn>;
 };
 
 export default Column;
