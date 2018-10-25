@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import "./thing.scss";
+import "./Header.scss";
 
 import Grid from './Grid';
 import Column from './Column';
