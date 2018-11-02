@@ -37,7 +37,6 @@ class App extends Component {
           <meta name="twitter:card" content={meta.description} />
           <meta name="twitter:site" content={meta.twitter_profile} />
           <meta name="twitter:creator" content={meta.creator} />
-          <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
         </Helmet>
         />
         <div>
