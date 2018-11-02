@@ -15,9 +15,31 @@ const title = '{{ cookiecutter.project_name }}';
 
 class App extends Component {
   render() {
+    const meta = {
+      description: "This is the description of your website",
+      site_name: title,
+      type:"This is the type of your website",
+      image:"" ,
+      url:"" ,
+      twitter_profile: "",
+      creator: ""
+    }
     return (
       <Wrapper>
-        <Helmet titleTemplate={`%s - ${title}`} />
+        <Helmet>
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta property="og:site_name" content={meta.site_name} />
+          <meta property="og:description" content={meta.description} />
+          <meta property="og:type" content={meta.type} />
+          <meta property="og:image" content={meta.image} />
+          <meta property="og:url" content={meta} />
+          <meta name="twitter:card" content={meta.description} />
+          <meta name="twitter:site" content={meta.twitter_profile} />
+          <meta name="twitter:creator" content={meta.creator} />
+          <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+        </Helmet>
+        />
         <div>
           <Header />
           <Switch>
