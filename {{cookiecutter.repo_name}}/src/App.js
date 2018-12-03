@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import Meta from './components/Meta';
 
 import routes from './routes';
 
@@ -11,24 +11,22 @@ import Grid from './components/Grid';
 import Column from './components/Column';
 import Footer from './components/Footer';
 
-const title = '{{ cookiecutter.project_name }}';
-
 class App extends Component {
+
   render() {
+
     const meta = {
-      description: '{{cooliecutter.description}}',
-      site_name: title,
-      type:"PLEASE CHANGE THIS TO: website name",
-      image:"PLEASE CHANGE THIS TO: featured image",
-      url:"PLEASE CHANGE THIS TO: featured url" ,
+      description: '{{ cookiecutter.description }}',
+      type: "PLEASE CHANGE THIS TO: website name",
+      image: "PLEASE CHANGE THIS TO: featured image",
+      url: "PLEASE CHANGE THIS TO: featured url" ,
       twitter_profile: "PLEASE CHANGE THIS TO: featured profile",
       creator: "PLEASE CHANGE THIS TO: creator of featured content"
-    }
+    };
+
     return (
       <Wrapper>
-        <Helmet>
-          <title>{title}</title>
-        </Helmet>
+        <Meta {...meta} />
         <div>
           <Header />
           <Switch>
