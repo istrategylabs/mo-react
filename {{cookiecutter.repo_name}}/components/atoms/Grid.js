@@ -2,8 +2,8 @@ import React, { Children, cloneElement } from 'react';
 import styled from 'styled-components';
 import { isEmpty } from 'lodash';
 
-import { XXXLARGE, XLARGE, SMALL } from '../styles/spacing';
-import { XL, L, M } from '../styles/breakpoints';
+import { XXXLARGE, XLARGE, SMALL } from '../../styles/spacing';
+import { XL, L, M } from '../../styles/breakpoints';
 
 const StyledGrid = styled.div`
   display: flex;

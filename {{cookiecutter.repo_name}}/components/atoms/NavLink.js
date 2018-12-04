@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import Link from 'next/link';
 import styled from 'styled-components';
-import { PRIMARY, SECONDARY, TEXT } from '../styles/colors';
+import { PRIMARY, SECONDARY, TEXT } from '../../styles/colors';
 
 const NavLink = styled.div`
   a {
@@ -16,10 +16,10 @@ const NavLink = styled.div`
   }
 `;
 
-export default ({path, exact, ...props}) => (
-  <Route path={path} exact={exact} children={({match}) => (
-    <NavLink active={match}>
-      <Link to={path}>{props.title}</Link>
-    </NavLink>
-  )} />
+export default ({ href, active, children }) => (
+  <NavLink active={active}>
+    <Link href={href}>
+      <a>{children}</a>
+    </Link>
+  </NavLink>
 );

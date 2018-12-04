@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
-import routes from '../routes';
-import NavLink from './NavLink';
+import styled from 'styled-components';
+import NavLink from '../atoms/NavLink';
 
 const StyledNav = styled.nav`
   align-items: center;
@@ -25,8 +24,6 @@ const StyledNav = styled.nav`
 export default (props) => (
   <StyledNav>
     <h1>Navigation</h1>
-    {routes.map((route, i) => (
-      <NavLink key={i} {...route} />
-    ))}
+    <NavLink href="/">Home</NavLink>
   </StyledNav>
 )

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styled from 'styled-components';
 
-import Grid from './Grid';
-import Column from './Column';
-import Nav from './Nav';
+import Grid from '../atoms/Grid';
+import Column from '../atoms/Column';
+import Nav from '../molecules/Nav';
 
 const StyledContainer = styled.div`
   background: #eee;
@@ -28,8 +28,10 @@ export default (props) => (
     <Grid>
       <Column width={12}>
         <StyledHeader>
-          <Link to="/">
-            <img className="logo" src="/images/logo.svg" alt="{{ cookiecutter.project_name }}" height="auto" width={210} data-testid="home-image" />
+          <Link href="/">
+            <a>
+              <img className="logo" src="/static/logo.svg" alt="{{ cookiecutter.project_name }}" height="auto" width={210} data-testid="home-image" />
+            </a>
           </Link>
           <Nav />
         </StyledHeader>

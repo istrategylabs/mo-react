@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Grid from './Grid';
-import Column from './Column';
+
+import Grid from '../atoms/Grid';
+import Column from '../atoms/Column';
 
 const StyledPage = styled.div`
   padding: 40px 0;
