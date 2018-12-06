@@ -16,7 +16,7 @@
     "@babel/core": "^7.1.2",
     "babel-core": "^7.0.0-bridge",
     "babel-jest": "^23.6.0",
-    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-styled-components": "^1.9.2",
     "enzyme": "3.4.3",
     "enzyme-adapter-react-16": "1.2.0",
     "jest": "^23.6.0",
@@ -28,6 +28,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "serve": "next build && next export && cd out && serve && cd ..",
     "test": "jest"
   },
   "eslintConfig": {
