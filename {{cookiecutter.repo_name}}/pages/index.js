@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from '../components/organisms/Head';
 import Header from '../components/organisms/Header';
+import Meta from '../components/molecules/Meta';
 import Footer from '../components/organisms/Footer';
 import Page from '../components/layouts/Page';
 import Wrapper from '../components/atoms/Wrapper';
@@ -10,6 +10,7 @@ import Text from '../components/atoms/Text';
 
 export default (props) => (
   <Wrapper>
+    <Meta title="Home" description="{{ cookiecutter.description }}" />
     <div>
       <Header />
       <Page>
