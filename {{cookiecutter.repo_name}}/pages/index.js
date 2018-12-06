@@ -6,16 +6,19 @@ import Page from '../components/layouts/Page';
 import Wrapper from '../components/atoms/Wrapper';
 import Column from '../components/atoms/Column';
 import Grid from '../components/atoms/Grid';
-import TextJumbo from '../components/atoms/TextJumbo';
+import Text from '../components/atoms/Text';
 
 export default (props) => (
   <Wrapper>
     <div>
       <Header />
       <Page>
-        <TextJumbo data-testid="home-text">This is the <strong>Home</strong> view.</TextJumbo>
-        <TextJumbo color="blue">Jumbo in blue.</TextJumbo>
-        <p>Scelerisque venenatis nibh fames ad quam feugiat leo commodo vitae sed lacus duis habitant maecenas sem interdum quisque duis mauris scelerisque scelerisque dui elit a condimentum vestibulum ad vestibulum. Laoreet nostra dui vivamus vestibulum integer taciti suscipit consectetur in a nullam quam nam ad nunc class nec ullamcorper urna sed nascetur ad.</p>
+        <Text tag="h1" size="large" data-testid="home-text">This is the <strong>Home</strong> view.</Text>
+        <Text color="blue" size="jumbo">Jumbo in blue.</Text>
+        <Text color="red" size="xxlarge">XXL in red.</Text>
+        <Text size="xlarge">XL text.</Text>
+        <Text size="large">Large text.</Text>
+        <Text>Scelerisque venenatis nibh fames ad quam feugiat leo commodo vitae sed lacus duis habitant maecenas sem interdum quisque duis mauris scelerisque scelerisque dui elit a condimentum vestibulum ad vestibulum. Laoreet nostra dui vivamus vestibulum integer taciti suscipit consectetur in a nullam quam nam ad nunc class nec ullamcorper urna sed nascetur ad.</Text>
       </Page>
     </div>
     <Footer>
