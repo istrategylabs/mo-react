@@ -19,16 +19,17 @@ const lineHeights = {
   jumbo: '1.1'
 }
 
-const Text = styled(({ tag, children, ...props }) => createElement(tag, props, children))`
+const Text = styled.p`
   color: ${props => props.color};
   font-size: ${props => sizes[props.size] || '1rem'};
   font-weight: ${props => fontWeights[props.size] || 'normal'};
   line-height: ${props => lineHeights[props.size] || 'inherit'};
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 `;
 
 Text.defaultProps = {
   color: 'inherit',
-  tag: 'p',
   size: 'normal'
 };
 

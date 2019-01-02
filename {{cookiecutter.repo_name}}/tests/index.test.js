@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import Index from './index';
+import Index from '../pages/index';
 
 it('Renders an index page.', () => {
   const app = shallow(<Index />);

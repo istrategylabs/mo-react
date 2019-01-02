@@ -14,8 +14,8 @@ export default (props) => (
     <div>
       <Header />
       <Page>
-        <Text tag="h1" size="large" data-testid="home-text">This is the <strong>Home</strong> view.</Text>
-        <Text color="blue" size="jumbo">Jumbo in blue.</Text>
+        <Text as="h1" size="large" data-testid="home-text">This is the <strong>Home</strong> view.</Text>
+        <Text as="h2" color="blue" size="jumbo">Jumbo in blue.</Text>
         <Text color="red" size="xxlarge">XXL in red.</Text>
         <Text size="xlarge">XL text.</Text>
         <Text size="large">Large text.</Text>
