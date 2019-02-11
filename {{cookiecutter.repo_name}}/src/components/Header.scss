@@ -1,0 +1,10 @@
+@import '~styles/scss/settings';
+
+.thing {
+    height: #{$xsmall-breakpoint};
+    // margin: 10rem;
+    @media #{$xsmall-only} {
+        padding: 6rem !important;
+        height: 1000px;
+    }
+}

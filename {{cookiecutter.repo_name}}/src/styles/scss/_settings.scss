@@ -1,0 +1,28 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Breakpoints
+$xsmall-breakpoint: 350px;
+$small-breakpoint:  420px;
+$medium-breakpoint: 768px;
+$large-breakpoint:  1024px;
+$xlarge-breakpoint: 1720px;
+
+$screen: "only screen";
+
+// Media Queries
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$xsmall-only: "#{$screen} and (max-width: #{$xsmall-breakpoint})";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{$small-breakpoint})";
+
+$medium-up: "#{$screen} and (min-width:#{$small-breakpoint + 1px})";
+$medium-only: "#{$screen} and (min-width:#{$small-breakpoint + 1px}) and (max-width:#{$medium-breakpoint})";
+$medium-down: "#{$screen} and (max-width:#{$medium-breakpoint + 1px})";
+
+$large-up: "#{$screen} and (min-width:#{$medium-breakpoint + 1px})";
+$large-only: "#{$screen} and (min-width:#{$medium-breakpoint + 1px}) and (max-width:#{$large-breakpoint + 1px})";
